@@ -1,18 +1,45 @@
 body{
     display: flex;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #DAE0F2;
+}
+
+.imageContainer{
+    width:max(300px,50%);
+    position: relative;
+    flex-shrink:2;
 }
 
 #backgroundImage{
-    width: max(150px,30%);
+    width: max(300px,100%);
+    height:100vh;
+    flex-shrink:2;
 }
 
+.imageText{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:20%;
+    left:auto;
+    background-color: #333a7362;
+    padding:20px;
+    color:white;
+    font-weight: bold;
+}
+
+#shrimpPic{
+    width:30%;
+}
 
 .right{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    margin:60px;
+    align-items:center;
+    margin:auto;
+    width:100%;
 }
 
 #form{
@@ -21,10 +48,15 @@ body{
 
 fieldset{
     border:0;
+    margin:0;
 }
 
 legend{
-    margin-bottom:20px;
+    font-size:0;
+}
+
+.content{
+    font-size:50px;
 }
 
 .boxes{
@@ -41,8 +73,53 @@ legend{
 
 input{
     border:0;
-    border-bottom: 3px solid gray;
+    border-bottom: 3px solid #3b4067;
+    background-color: #DAE0F2;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline-color: lightskyblue;
 }
 
+button{
+    background-color:#D6E5E3;
+    border: 3px solid #424874;
+    border-radius:10px;
+    padding: 10px 5px;
+}
+
+button:hover{
+    cursor:pointer;
+    background-color:#d0dfdc;
+    border: 3px solid #3b4067;
+}
+
+.login{
+    text-decoration: none;
+    color:#424874;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+@media only screen and (max-width: 600px) {
+    body {
+      display: block;
+    }
+
+    .imageContainer{
+        width:100%;
+        position: relative;
+        margin:0;
+    }
+    
+    #backgroundImage{
+        width: 100%;
+    }
+  }
 
 

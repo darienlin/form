@@ -6,12 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Form</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
-    <img src="https://images.unsplash.com/photo-1630319067843-05f487201ca9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80"
+    <div class="imageContainer">
+    <img src="https://images.unsplash.com/photo-1578313097818-dfe8d38aa758?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80"
         alt="background image" id="backgroundImage">
+        <div class="imageText"><img src="https://www.shrimpscience.com/images/shrimp/rc.png"
+        alt="shrimp picture" id="shrimpPic">Shrimpies</div>
+    </div>
 
     <div class="right">
         <div class="contentContainer">
@@ -21,48 +26,48 @@
                     <legend>Contact Information</legend>
                     <div class="boxes">
                         <div class="column">
-                        <label for="firstName">First name: </label>
-                        
-                        <input type="text" id="firstName">
-                    </div>
+                            <label for="firstName">First name: </label>
 
-                    <div class="column">
-                        <label for="lastName">Last name: </label>
-                        <input type="text" id="lastName">
-                    </div>
+                            <input type="text" id="firstName" required>
+                        </div>
+
+                        <div class="column">
+                            <label for="lastName">Last name: </label>
+                            <input type="text" id="lastName" required>
+                        </div>
                     </div>
 
 
                     <div class="boxes">
 
                         <div class="column">
-                        <label for="email">Email: </label>
-                        <input type="email" id="email">
-                    </div>
+                            <label for="email">Email: </label>
+                            <input type="email" id="email" required>
+                        </div>
 
                         <div class="column">
-                        <label for="phoneNum">Phone number: </label>
-                        <input type="number" id="phoneNum">
-                    </div>
+                            <label for="phoneNum">Phone number: </label>
+                            <input type="number" id="phoneNum">
+                        </div>
                     </div>
 
                     <div class="boxes">
                         <div class="column">
-                        <label for="password">Password</label>
-                        <input type="text" id="password">
-                    </div>
+                            <label for="password">Password</label>
+                            <input type="password" id="password" oninput="matching()" required>
+                        </div>
 
                         <div class="column">
-                        <label for="confirmPassword">Confirm Password</label>
-                        <input type="text" id="confirmPassword">
-                    </div>
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" id="confirmPassword" min="5" oninput="matching()" required>
+                        </div>
                     </div>
                     <button type="submit">Create Account</button>
                 </fieldset>
             </form>
 
 
-            <div class="content">Already have an account? Log in</div>
+            <div class="account">Already have an account? <a class="login">LOG IN</a></div>
         </div>
     </div>
 </body>
